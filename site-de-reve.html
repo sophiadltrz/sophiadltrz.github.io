@@ -1,40 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mon site de rêve</title>
+<style>
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #fff0f5;  /* rose clair */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header avec avatar */
+header {
+    padding: 20px;
+    background-color: #ffccf9; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 10px 0;
+    color: #ff3399;
+}
+
+header img {
+    border-radius: 50%;
+    margin: 10px;
+}
+
+/* Menu principal */
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ff3399;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fff;
+    background-color: #ff66cc;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+/* Mini-menu site de rêve */
+nav + nav {
+    margin: 20px 0;
+}
+
+nav + nav a {
+    margin: 0 10px;
+    color: #c71585;
+    font-weight: bold;
+}
+
+nav + nav a:hover {
+    color: #fff;
+    background-color: #ff99cc;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+/* Sections centrées */
+section {
+    margin: 40px auto;
+    max-width: 800px;
+    background-color: #ffe6f0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #ff3399;
+}
+
+/* Images dans les sections */
+section img {
+    margin: 10px;
+    border-radius: 15px;
+    border: 2px solid #ff99cc;
+}
+
+/* Listes */
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+    text-align: left;
+}
+
+/* Paragraphe */
+p {
+    line-height: 1.6;
+}
+</style>
+</head>
+<body>
+
 <header>
   <h1>✨ Mon site de rêve ✨</h1>
-  <img src="avatar.png" alt="Mon avatar" width="120" style="border-radius:50%; margin:10px;">
+  <img src="avatar.png" alt="Mon avatar" width="120">
 </header>
 
+<!-- Menu principal -->
 <nav>
   <a href="index.html">Accueil</a>
   <a href="production.html">Production scolaire</a>
   <a href="passions.html">Mes passions</a>
   <a href="site-de-reve.html">Mon site de rêve</a>
 </nav>
+
+<!-- Mini-menu site de rêve -->
+<nav>
   <a href="#voyage">Voyage</a>
   <a href="#mode">Mode</a>
   <a href="#nourriture">Nourriture</a>
   <a href="#reve-final">Rêve final</a>
 </nav>
+
+<!-- Rubrique Voyage -->
 <section id="voyage">
   <h2>🌴 Voyage</h2>
-  <p>J’aimerais voyager et découvrir des cultures incroyables :</p>
+  <p>Mon rêve est de voyager à travers le monde et découvrir des cultures incroyables :</p>
   <ul>
-    <li>🇧🇷 Brésil – plages, musique et ambiance festive.</li>
-    <li>🇰🇷 Corée du Sud – K-dramas, nourriture et paysages.</li>
-    <li>🇮🇹 Sicile – villes historiques et mer Méditerranée.</li>
+    <li>🇧🇷 Brésil – plages, musique, ambiance festive</li>
+    <li>🇰🇷 Corée du Sud – K-dramas, nourriture, paysages</li>
+    <li>🇮🇹 Sicile – villes historiques et mer Méditerranée</li>
   </ul>
   <img src="voyage1.png" alt="Brésil" width="200">
   <img src="voyage2.png" alt="Corée du Sud" width="200">
   <img src="voyage3.png" alt="Sicile" width="200">
 </section>
+
+<!-- Rubrique Mode -->
 <section id="mode">
   <h2>👗 Mode</h2>
-  <p>J’adore la mode et créer mon style unique :</p>
+  <p>J’adore la mode et m’inspirer des tendances pour créer mon style unique :</p>
   <img src="mode1.png" alt="Mode 1" width="200">
   <img src="mode2.png" alt="Mode 2" width="200">
 </section>
+
+<!-- Rubrique Nourriture -->
 <section id="nourriture">
   <h2>🍕 Nourriture</h2>
-  <p>Même si je n’ai pas de nourriture préférée, voici quelques exemples :</p>
+  <p>Je n’ai pas de nourriture préférée, mais voici quelques exemples délicieux :</p>
   <ul>
     <li>🍣 Sushi</li>
     <li>🍫 Chocolat</li>
@@ -43,12 +154,13 @@
   <img src="nourriture1.png" alt="Sushi" width="200">
   <img src="nourriture2.png" alt="Chocolat" width="200">
 </section>
+
+<!-- Rubrique Rêve final -->
 <section id="reve-final">
   <h2>✨ Rêve final</h2>
-  <p>Mon rêve est d’avoir un quotidien créatif et joyeux, avec voyages, mode et bons moments avec mes amis et ma famille.</p>
+  <p>Mon rêve est d’avoir un quotidien créatif et joyeux, entourée de mes passions, voyages, mode et bons moments avec mes amis et ma famille.</p>
   <img src="reve1.png" alt="Rêve final" width="200">
 </section>
 
-
-
-
+</body>
+</html>
