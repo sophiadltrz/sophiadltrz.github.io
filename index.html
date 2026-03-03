@@ -1,48 +1,86 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<title>Accueil</title>
-<link rel="stylesheet" href="style.css">
+	<title> Site de Sophia </title>
+	
+	<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
-  <script>
-  var music = document.getElementById("bg-music");
 
-  function playMusic() {
-    music.play();
-  }
-
-  function pauseMusic() {
-    music.pause();
-  }
-</script>
 <body>
+	<div id="entete-de-page"> 
+		<p> Site de Sophia <br/> </p>
+	</div> 
+	
+	<table id="bloc-menu" border="1">
+	<tr>
+<th><a href="index.html"> Accueil </a></th>
+		<th><a href="productions.html">Productions scolaires</a></th>
+		<th><a href="passions.html">Mes passions</a></th>
+		<th><a href="videos.html">Mes vidéos</a></th>
+		<th><a href="site.html">Mon site de rêve</a></th>
+		
+		
+	</tr>
+	</table> <br/> 
+	
+	<div class="presentation">
+  <img src="avatar.png" alt="ceci est mon avatar" class="arrondie">
 
-<header><img src="avatar.png" alt="Mon avatar" width="120" style="border-radius:50%; margin:10px;">
-  <h1>🌸 Bienvenue sur mon site 🌸</h1>
+  <div class="texte-presentation">
+    <h2>Je me présente</h2>
+    <p>je suis Deletrez Sophia, j'ai 16 ans et je suis actuellement en classe de seconde au lycée Sacré-Coeur, j'ai réalisé ce site dans le cadre d'un projet en SNT </p>
+			  </div>
+</div>
+			<!--on ajoute le lien où se trouve la musique -->
 
-<nav>
-  <a href="index.html">Accueil</a>
-  <a href="production.html">Production scolaire</a>
-  <a href="videos.html">Mes videos</a>
-  <a href="passions.html">Mes passions</a>
-  <a href="site-de-reve.html">Mon site de rêve</a>
-</nav>
-</section
-  <h2>Présentation</h2>
-   <p> Bonjour ! Je m'appelle Sophia.</p>
-  <p>Je suis passionnée par le maquillage, les séries coréennes (K-dramas), la mode et le mannequinat. Ce site est mon projet pour le lycée où je partage mes passions, mes projets scolaires et mes créations personnelles. J'espère que vous prendrez plaisir à explorer mon univers rose et girly !</p>
-  <p>J’ai choisi un design coloré et esthétique pour refléter ma personnalité et rendre le site agréable à visiter.</p>
-</section>
- <h2>🎵 Musique d'ambiance</h2>
+<div>
 
-<button onclick="playMusic()" class="music-btn">▶️ Activer la musique</button>
-<button onclick="pauseMusic()" class="music-btn">⏸️ Pause</button>
+<audio  id="zic"src="music.mp3"></audio>
+<!--on nomme les boutons et leur statut -->
+<div>
+<a href="javascript:void(0)" onclick="changeState(0)" class="bouton hover">PLAY</a>
+<a href="javascript:void(0)" onclick="changeState(1)" class="bouton">PAUSE</a>
+<a href="javascript:void(0)" onclick="changeState(2)" class="bouton active">STOP</a>
+</div>
+<!--on écrit les variable du script -->
+<script>
+<!--on attribue valeur et fonction de chaque bouton -->
+function changeState(x){
+let boutons = document.querySelectorAll(".bouton");
+let audio = document.querySelector("#zic");
+for(let i =0; i<boutons.length; i++){
+boutons[i].classList.remove("active");
+}
+boutons[x].classList.add("active");
+if(x == 0){
+audio.play();
+}
+if(x == 1){
+audio.pause();
+}
+if(x == 2){
+audio.pause();
+audio.currentTime = 0;
+}
+}
+</script></div>
+		<hr>
+		<div id="infos">
+			<h3> A lire aussi: </h3>
+			<ul>
+				<li> <a href="passions.html">Mes passions</a> </li>
+				<li><a href="https://www.zara.com/fr/">Site zara</a> </li>
+	
+			</ul>
+		</div>
+	</div> <br/> 
+	
+	<div id="pied-de-page">
+		<p> Projet SNT - Dernière mise à jour : 09/02/2026 <br/>
+		Les textes et images utilisés n'engagent que son auteur : Sophia</p>
+	</div> <br/> 
 
-<audio id="bg-music">
-  <source src="musique.mp3" type="audio/mpeg">
-</audio>
-  <img src="accueil.png" alt="Image d'accueil" width="300">
-</section>
 </body>
+
 </html>

@@ -1,55 +1,114 @@
+ iframe {
+	
+height:70vh;
+width:70%;
+}
 body {
-  background: linear-gradient(to right, #ffd6e0, #ff8fab);
-  font-family: Arial, sans-serif;
-  text-align: center;
+	margin: 0;
+	padding: 0;
+	background-color: #DBB2CA; 
+	font-family: 'Loud', sans-serif;
+	font-size: 16px;
 }
 
-header {
-  background-color: #ff4d6d;
-  color: white;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 30px;
-  font-family: "Courier New", cursive;
+.presentation {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
 }
 
-nav {
-  margin: 20px;
+.presentation img {
+  width: 120px;   /* plus fiable que % ici */
+  height: auto;
 }
 
-nav a {
+.texte-presentation {
+  flex: 1;
+  color:#163880;
+}
+th { width: 500px;}
+ul {
+  list-style-image: url(puce-zelda.png); /* image comme puce attention à l’esthétique */
+}
+
+
+#entete-de-page {
+	padding: 5px;
+	height: 100px;
+	background-color:#E85FB1;
+	font-size: 32px;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-align: center;
+}
+#bloc-menu {
+	height: 36px;
+	background-color:#F0CF90;
+	float: center;
+	color: white;
+}
+#contenu {
+	padding: 10px;
+	background-color:  #7BBAB8;
+	color:#163880;
+}
+#infos {
+	color: #163880;
+	font-style: italic;
+}
+#pied-de-page {
+	padding: 5px;
+	background-color: #E85FB1;
+	font-size: 11px;
+}
+
+.bouton.active {
+Color:#9D08F3;
+}	
+
+.bouton {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 400;
+	color: #f34808;
+	font-size: 4rem;
+	line-height: 2em;
+	margin: 0 20px; /* espace entre les boutons */
+}
+
+/*mettre une image aux bords arrondis*/
+
+.arrondie {
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+border-radius:7px;
+}
+
+.arrondie1 {
+-moz-border-radius:100px;
+-webkit-border-radius:100px;
+border-radius:100px;
+}
+
+a:link {
+  color:#163880;
   text-decoration: none;
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #ff99c8;
-  color: white;
-  border-radius: 50px;
-  font-weight: bold;
 }
 
-nav a:hover {
-  background-color: #c9184a;
+a:visited {
+  color:  #18042E;
+  text-decoration: none;
 }
 
-section {
-  background-color: white;
-  padding: 20px;
-  margin: 20px auto;
-  width: 70%;
-  border-radius: 25px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-.music-btn {
-  background-color: #ff69b4;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  margin: 10px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 16px;
+
+a:hover {
+ color: #FFFFFF;
+ text-decoration: none;
+ 
 }
 
-.music-btn:hover {
-  background-color: #ff1493;
+a:active {
+    color: #601EBD;
+	 text-decoration: none;
 }

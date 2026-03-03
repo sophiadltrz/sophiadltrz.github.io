@@ -1,0 +1,89 @@
+
+/*importer une police de caractère sur google font*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+body {
+	Background-color: #83b0f0;
+	margin: 500;
+	justify-content: left;
+	height:100vh;
+	width:100%;
+	font-family: 'Anton'; sans-serif;
+	font-size: 20px;
+
+	/*changer l'apparence des liens*/
+	a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: #f90aea;
+}
+
+a:visited {
+  color:  #25661f;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background:  #FF5733
+;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+  background: #1f3c66;
+}
+
+a:active {
+  background: #265301;
+  color: #900C3F;
+}
+}
+.h1 {
+	display:content;
+	float:left;
+	text-align:left;
+	font-weight: 400;
+	color:#000000;
+	font-size:50px;
+	line-height:2em;
+}
+/*créer des commandes pour lancer /arrêter de la musique*/
+.bouton {
+	display:block;
+	text-align:center;
+	text-decoration:none;
+	font-weight: 400;
+	color:#f34808;
+	font-size:4rem;
+	line-height:2em;
+}
+
+.bouton.active {
+Color:#08c5f3;
+}
+/*mettre une image aux bords arrondis*/
+
+.arrondie {
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+border-radius:7px;
+}
+
+
+..bouton.active {
+Color:#08c5f3;
+}	
+ 
+.bouton {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	font-weight: 400;
+	color: #f34808;
+	font-size: 4rem;
+	line-height: 2em;
+	margin: 0 20px; /* espace entre les boutons */
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UFT-8">
+<title>OUTILS</title>
+<!--je pense à mettre le lien vers le fichier css en faisant attention à ce qu'il ait le même nom que celui qui est dans mon dossier -->
+<link rel="stylesheet"href="code-css.css" type="text/css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<body>
+<!--mettre un lecteur textuel pour une musique -->
+<h1> Mettre de la musique :</h1> (ci-dessus c'est un titre h1)
+<!--on ajoute le lien où se trouve la musique -->
+<audio  id="zic"src="epic-music.mp3"></audio>
+<!--on nomme les boutons et leur statut -->
+<div>
+<a href="javascript:void(0)" onclick="changeState(0)" class="bouton">PLAY</a>
+<a href="javascript:void(0)" onclick="changeState(1)" class="bouton">PAUSE</a>
+<a href="javascript:void(0)" onclick="changeState(2)" class="bouton active">STOP</a>
+</div>
+<!--on écrit les variable du script -->
+<script>
+<!--on attribue valeur et fonction de chaque bouton -->
+function changeState(x){
+let boutons = document.querySelectorAll(".bouton");
+let audio = document.querySelector("#zic");
+for(let i =0; i<boutons.length; i++){
+boutons[i].classList.remove("active");
+}
+boutons[x].classList.add("active");
+if(x == 0){
+audio.play();
+}
+if(x == 1){
+audio.pause();
+}
+if(x == 2){
+audio.pause();
+audio.currentTime = 0;
+}
+}
+</script>
+<!--mettre en forme une image -->
+<h1> Arrondir les angles d'une image :</h1> 
+<center><p>voici une image:<br> <img src="link.png" width="300"></p>
+<p>La voici avec des bords arrondis grâce au fichier css:</p>
+<p>
+ <img src="link.png" width="300" alt="image IA" class="arrondie" />
+</p></center>
+<!--mettre en forme et en couleur les lien en fonctionde leur statut -->
+<h1>Mise en forme des liens</h1>
+ <center><p>Ceci est un lien vers <a href="https://fr.wikipedia.org/wiki/The_Legend_of_Zelda">Le Wikipédia de "The legend of Zelda"</a></p></center>
+ 
+ <!--intégrer une page web externe dans son propore site -->
+<h1>Insérer une page web dans son site avec une iframe:</h1>
+<p><center><iframe src="https://zelda.fandom.com/fr/wiki/ZeldaWiki"width="60%" height="600" name="Zelda" title=fandomZelda></iframe></center></p>
+<!--intégrer une vidéo Youtube -->
+<h1>Insérer une vidéo YouTube dans son site :</h1>
+<center><p><iframe width="560" height="315" src="https://www.youtube.com/embed/sNE-ISmnhl8?si=KjKXSmA-VlkJKTb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p></center>
+<p><center>Il vous faut partager la vidéo et cliquer sur "Intégrer"<br> <img src="tutoYT1.png"><br><br> Puis sélectionnner le code et le coller dans votre page<br> <img src="tutoYT2.png"></center></p>
+
+
+<br><br><br><br>
+</body>
+</html>
